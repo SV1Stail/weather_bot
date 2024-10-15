@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ./src
+      dockerfile: Dockerfile
+    image: backdev:v1.0
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network
+    environment:
+      - WEATHER=b5d33b80-8441-4e9a-a6fb-2118d1d9e1b5
+      - TG=7787339120:AAH6vP-RSWLzcTltXZJy1KobvbM6wR-tYT8
+
+networks:
+  app-network:
