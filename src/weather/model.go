@@ -1,6 +1,8 @@
 package weather
 
-var keyWeather = ""
+import "os"
+
+var keyWeather = os.Getenv("WEATHER")
 //b5d33b80-8441-4e9a-a6fb-2118d1d9e1b5
 type WeatherResponse struct {
 	Now       int64      `json:"now"`

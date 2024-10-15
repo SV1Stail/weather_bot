@@ -11,7 +11,7 @@ import (
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 )
 
-var token = ""
+var token = os.Getenv("TG")
 
 func main() {
 	logLevel := &slog.LevelVar{}
